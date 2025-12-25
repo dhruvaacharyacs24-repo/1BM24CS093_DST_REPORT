@@ -74,12 +74,13 @@ void display() {
         printf("List is empty\n");
         return;
     }
-    printf("Linked list elements:\n");
+    printf("Linked list elements:\t");
     temp = head;
-    while (temp != NULL) {
-        printf("%d ", temp->data);
+    while (temp->next != NULL) {
+        printf("%d->", temp->data);
         temp = temp->next;
     }
+    printf("%d",temp->data);
     printf("\n");
 }
 
